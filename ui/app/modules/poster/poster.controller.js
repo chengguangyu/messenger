@@ -17,8 +17,8 @@
             vm.msg = {};
 
             vm.init = function() {
-                vm.msg.subject = 'hello'; //null;
-                vm.msg.content = 'what is wso2?';//null;
+                vm.msg.subject = null;
+                vm.msg.content = null;
 
                 $http.get('/api/users').success(function(data) {
                     if (data.success) {
