@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Post Message</h2>
+    <p>This view allows you to post a new message to a user.</p>
+
+    <div class="panel panel-default panel-primary" style="margin-top:15px;">
+        <div class="panel-heading">New Message</div>
+        <div class="panel-body">
+            <p>Please enter your message.</p>
+
+            <form role="form" ng-submit="poster.submit()" name="poster.msg_form"
+                  novalidate="" class="form-validate" style="margin-top:15px;">
+                <div class="form-group">
+                    <label>Message Subject</label>
+                    <input class="form-control" type="text" name="subject"
+                           placeholder="message subject" 
+                           ng-model="poster.msg.subject" required="" />
+                    <span ng-show="poster.msg_form.subject.$dirty &amp;&amp; poster.msg_form.subject.$error.required" 
+                          class="text-danger">This field is required</span>
+                </div>
+                <div class="form-group">
+                    <label>Message Body</label>
+                    <input class="form-control" type="text" name="content"
+                           placeholder="message body" 
+                           ng-model="poster.msg.content" required="" />
+                    <span ng-show="poster.msg_form.content.$dirty &amp;&amp; poster.msg_form.content.$error.required" 
+                          class="text-danger">This field is required</span>
+                </div>
+                <div class="form-group">
+                    <label>Message Receiver</label>
+                    <select class="form-control" style="max-width:360px;"
+                            ng-model="poster.msg.receiver" 
+                            ng-options="user.firstName + ' ' + user.lastName for user in poster.users"></select>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <button class="btn btn-default" type="submit">Send</button>
+                        <span ng-show="poster.executor.working">&nbsp;<i class="fa fa-spinner fa-spin"></i></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div ng-show="poster.executor.message" class="alert alert-danger">{{poster.executor.message}}</div>
+</div>

@@ -1,0 +1,29 @@
+/*
+ * @(#)main.css
+ */
+
+/*
+ * The main styles 
+ *
+ * Author: Chengguang Yu
+ * Created: 2017/06/07
+ */
+
+body {
+  padding-top: 70px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+th.centered, td.centered {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+/* end of main.css */

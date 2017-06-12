@@ -1,0 +1,25 @@
+{
+  "name": "messenger",
+  "description": "The messenger app",
+  "authors": [
+    "Chengguang Yu"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jstimezonedetect": "~1.0.5",
+    "moment": "^2.18.1",
+    "moment-timezone": "~0.5.2",
+    "angular": "1.5.0",
+    "angular-animate": "1.5.0",
+    "angular-cookies": "1.5.0",
+    "angular-sanitize": "1.5.0",
+    "angular-resource": "1.5.0",
+    "angular-route": "1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "angular-bootstrap": "^1.1.2",
+    "angular-toArrayFilter": "^1.0.1"
+  }
+}
