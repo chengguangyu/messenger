@@ -56,12 +56,26 @@ This REST API will retrieve messages received by a specific user.
 URL
 
 ```shell
-GET /api/messenger/${UserID}
+GET /api/messenger/users/${UserID}
 ```
 
 This API does not require a request body.
 
 On success an HTTP response code 200 will be returned and the body will contain a list of messages.
+
+### Get a message by message id
+
+This REST API will retrieve a message by a specified id.
+
+URL
+
+```shell
+GET /api/messenger/messages/${MessageID}
+```
+
+This API does not require a request body.
+
+On success an HTTP response code 200 will be returned and the body will contain a message.
 
 ### Post a message to a user
 
